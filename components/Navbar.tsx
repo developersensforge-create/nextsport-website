@@ -21,6 +21,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <Link href="/features" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Features</Link>
           <Link href="/pricing" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Pricing</Link>
+          <Link href="/about" className="text-white/80 hover:text-white text-sm font-medium transition-colors">About</Link>
           <Link href="/download" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Download</Link>
         </div>
 
