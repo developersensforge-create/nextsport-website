@@ -7,18 +7,11 @@
   --text: #1E293B;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
+  background-color: #F8FAFC;
+  color: #1E293B;
 }
