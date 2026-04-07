@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "What age range is NextSport designed for?",
-    a: "NextSport is designed for youth baseball players ages 8–18. The drill recommendations and feedback are calibrated to be age-appropriate and easy for parents and young athletes to understand."
+    a: "NextSport is designed for youth baseball players ages 6–18. The drill recommendations and feedback are calibrated to be age-appropriate and easy for parents and young athletes to understand."
   },
   {
     q: "Do I need special equipment to record swings?",

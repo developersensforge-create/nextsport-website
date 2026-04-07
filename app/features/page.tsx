@@ -28,7 +28,7 @@ const features = [
     desc: "Every analysis generates a custom drill plan built around exactly what your child needs to work on — not a one-size-fits-all program. Drills are age-appropriate, clearly explained, and designed to fit into a normal practice schedule.",
     bullets: [
       "Drills tailored to identified weaknesses",
-      "Age-appropriate exercises (ages 8–18)",
+      "Age-appropriate exercises (ages 6–18)",
       "Clear instructions with reps and sets",
       "Updated with each new analysis",
     ],

@@ -34,7 +34,7 @@ export default function Home() {
 
               {/* Age badges */}
               <div className="flex gap-3 mb-8">
-                {["Ages 8–18", "All Skill Levels", "Any Smartphone"].map(tag => (
+                {["Ages 6–18", "All Skill Levels", "Any Smartphone"].map(tag => (
                   <span key={tag} className="bg-white/10 text-white/70 text-xs px-3 py-1.5 rounded-full border border-white/10">
                     ⚾ {tag}
                   </span>
@@ -111,7 +111,7 @@ export default function Home() {
               {[
                 { num: "10+", label: "Swing Metrics Analyzed" },
                 { num: "<30s", label: "Analysis Turnaround" },
-                { num: "Ages 8–18", label: "Youth Focus" },
+                { num: "Ages 6–18", label: "Youth Focus" },
                 { num: "Free", label: "To Start" },
               ].map(stat => (
                 <div key={stat.label}>
