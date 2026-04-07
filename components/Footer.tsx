@@ -8,9 +8,9 @@ export default function Footer() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="14" r="13" stroke="#00E676" strokeWidth="2"/>
-              <path d="M7 14 Q14 6 21 14" stroke="#00E676" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-              <circle cx="14" cy="14" r="2.5" fill="#00E676"/>
+              <circle cx="14" cy="14" r="13" stroke="#26a65c" strokeWidth="2"/>
+              <path d="M7 14 Q14 6 21 14" stroke="#26a65c" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+              <circle cx="14" cy="14" r="2.5" fill="#26a65c"/>
             </svg>
             <span className="text-white font-bold text-lg tracking-tight">NextSport</span>
           </Link>

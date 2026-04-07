@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "NextSport — AI Swing Analyzer for Youth Baseball & Softball",
   description:
     "Upload your child's swing video and get instant AI-powered coaching feedback. Free to start. Built for youth baseball and softball players and their parents.",
   keywords:
-    "youth baseball swing analyzer, AI baseball coaching app, baseball swing analysis, youth baseball training app",
+    "youth baseball swing analyzer, AI baseball coaching app, baseball swing analysis, youth baseball training app, softball swing analyzer",
   openGraph: {
     title: "NextSport — AI Swing Analyzer for Youth Baseball & Softball",
     description:
@@ -27,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${poppins.variable} font-sans`}>{children}</body>
     </html>
   );
 }

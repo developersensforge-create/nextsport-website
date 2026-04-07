@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { BaseballIcon, BatIcon, DiamondIcon, GloveIcon, StitchDivider, BaseballBgPattern } from "@/components/BaseballElements";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,19 +14,19 @@ export default function Home() {
         <section className="relative bg-[#0A1628] min-h-screen flex items-center pt-20 overflow-hidden">
           <BaseballBgPattern />
           {/* Green field glow */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#00E676]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#26a65c]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
             {/* Left */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+              <div className="inline-flex items-center gap-2 bg-[#26a65c]/10 border border-[#26a65c]/30 text-[#26a65c] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
                 <BaseballIcon className="w-4 h-4" />
                 AI-Powered Baseball &amp; Softball Training
               </div>
               <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
                 Better Swings.<br />
                 Faster Growth.<br />
-                <span className="text-[#00E676]">Powered by AI.</span>
+                <span className="text-[#26a65c]">Powered by AI.</span>
               </h1>
               <p className="text-white/70 text-lg mb-10 leading-relaxed">
                 Upload your child&apos;s swing video and get instant AI coaching feedback.
@@ -46,7 +47,7 @@ export default function Home() {
                   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                   Download for iOS
                 </a>
-                <a href="#download" className="flex items-center justify-center gap-2 bg-[#00E676] text-[#0A1628] font-semibold px-6 py-3.5 rounded-xl hover:bg-[#00ff88] transition-colors text-sm">
+                <a href="#download" className="flex items-center justify-center gap-2 bg-[#26a65c] text-[#0A1628] font-semibold px-6 py-3.5 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm">
                   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.45-7.19-2.78-2.78-10.66 9.83zm-1.15-20.23C1.73 3.85 1.5 4.28 1.5 4.83v14.34c0 .55.23.98.53 1.3l.07.06 8.03-8.03v-.19L2.03 3.53zm17.9 7.74L17.4 9.08l-2.99 2.99 2.99 2.99 2.54-1.19c.72-.42.72-1.11.99-1.6-.27-.47-.27-1.18-.99-1.6zM4.17.36L16.62 7.55 13.84 10.33 3.18.5a1.2 1.2 0 01-.15-.14z"/></svg>
                   Download for Android
                 </a>
@@ -54,42 +55,19 @@ export default function Home() {
               <p className="text-white/30 text-xs mt-4">📱 App store links coming soon — early access available</p>
             </div>
 
-            {/* Right: phone mockup */}
+            {/* Right: real app screenshot */}
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-64 h-[520px] bg-[#1a2840] rounded-[40px] border-2 border-white/20 shadow-2xl flex flex-col overflow-hidden">
-                  <div className="h-10 bg-[#0A1628] flex items-center justify-center">
-                    <div className="w-20 h-5 bg-[#1a2840] rounded-full"></div>
-                  </div>
-                  <div className="flex-1 bg-gradient-to-br from-[#0A1628] via-[#0d2040] to-[#0A1628] flex flex-col items-center justify-center p-5 gap-4">
-                    {/* Baseball icon */}
-                    <BaseballIcon className="w-16 h-16" />
-                    <p className="text-white font-bold text-sm">Swing Analysis</p>
-
-                    {/* Metrics */}
-                    <div className="w-full space-y-3">
-                      {[
-                        { label: "Hip Rotation", val: 78, unit: "%" },
-                        { label: "Bat Speed", val: 65, unit: "%" },
-                        { label: "Contact Zone", val: 82, unit: "%" },
-                        { label: "Follow Through", val: 71, unit: "%" },
-                      ].map((item) => (
-                        <div key={item.label}>
-                          <div className="flex justify-between text-xs text-white/60 mb-1">
-                            <span>{item.label}</span>
-                            <span className="text-[#00E676] font-semibold">{item.val}{item.unit}</span>
-                          </div>
-                          <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div className="h-full bg-[#00E676] rounded-full" style={{ width: `${item.val}%` }}></div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="w-full bg-[#00E676]/10 border border-[#00E676]/30 rounded-xl p-3 text-xs text-white/80">
-                      ⚾ <strong>Coach AI:</strong> Work on hip rotation timing. Try the hip drive drill 3× this week.
-                    </div>
-                  </div>
+                {/* Phone frame around real screenshot */}
+                <div className="w-64 rounded-[40px] border-2 border-white/20 shadow-2xl overflow-hidden bg-[#0A1628]">
+                  <Image
+                    src="/screens/homepage.png"
+                    alt="NextSport app home screen showing AI swing analysis dashboard"
+                    width={512}
+                    height={900}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
                 {/* Floating baseball decorations */}
                 <div className="absolute -top-4 -right-6 opacity-60">
@@ -98,14 +76,14 @@ export default function Home() {
                 <div className="absolute -bottom-4 -left-6 opacity-40">
                   <BaseballIcon className="w-8 h-8" />
                 </div>
-                <div className="absolute inset-0 rounded-[40px] bg-[#00E676]/5 blur-xl -z-10"></div>
+                <div className="absolute inset-0 rounded-[40px] bg-[#26a65c]/5 blur-xl -z-10"></div>
               </div>
             </div>
           </div>
         </section>
 
         {/* ── STATS BANNER ── */}
-        <section className="bg-[#00E676] py-10">
+        <section className="bg-[#26a65c] py-10">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
@@ -169,7 +147,7 @@ export default function Home() {
                 { step: "03", icon: "📋", title: "Get Your Game Plan", desc: "Receive a full AI mechanics breakdown + personalized drill plan within seconds. Print it, save it, or work through it right there at the field." },
               ].map(item => (
                 <div key={item.step} className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow relative overflow-hidden">
-                  <div className="text-[#00E676] font-black text-6xl absolute top-4 right-4 opacity-10 select-none">{item.step}</div>
+                  <div className="text-[#26a65c] font-black text-6xl absolute top-4 right-4 opacity-10 select-none">{item.step}</div>
                   <div className="text-3xl mb-4">{item.icon}</div>
                   <h3 className="text-xl font-bold text-[#0A1628] mb-3">{item.title}</h3>
                   <p className="text-[#1E293B]/60 leading-relaxed text-sm">{item.desc}</p>
@@ -204,14 +182,14 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="bg-[#0A1628] rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
               {/* Background glow */}
-              <div className="absolute top-0 right-0 w-80 h-80 bg-[#00E676]/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-80 h-80 bg-[#26a65c]/5 rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative">
-                <div className="inline-flex items-center gap-2 bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-semibold px-3 py-1.5 rounded-full mb-5 tracking-wide uppercase">
+                <div className="inline-flex items-center gap-2 bg-[#26a65c]/10 border border-[#26a65c]/30 text-[#26a65c] text-xs font-semibold px-3 py-1.5 rounded-full mb-5 tracking-wide uppercase">
                   🆕 Coming Soon
                 </div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                  Now Adding:<br /><span className="text-[#00E676]">Pitching Analysis</span>
+                  Now Adding:<br /><span className="text-[#26a65c]">Pitching Analysis</span>
                 </h2>
                 <p className="text-white/60 leading-relaxed mb-6">
                   NextSport is expanding beyond batting. Soon you&apos;ll be able to upload your child&apos;s
@@ -226,11 +204,11 @@ export default function Home() {
                     "Personalized pitching drills",
                   ].map(f => (
                     <li key={f} className="flex items-center gap-3 text-white/70 text-sm">
-                      <span className="text-[#00E676]">✓</span>{f}
+                      <span className="text-[#26a65c]">✓</span>{f}
                     </li>
                   ))}
                 </ul>
-                <span className="inline-block bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-sm font-semibold px-5 py-2.5 rounded-xl">
+                <span className="inline-block bg-[#26a65c]/10 border border-[#26a65c]/30 text-[#26a65c] text-sm font-semibold px-5 py-2.5 rounded-xl">
                   ⚾ Fastball Phase 1 — More Pitches Coming
                 </span>
               </div>
@@ -255,15 +233,15 @@ export default function Home() {
                         <div key={item.label}>
                           <div className="flex justify-between text-xs text-white/50 mb-1">
                             <span>{item.label}</span>
-                            <span className="text-[#00E676] font-semibold">{item.val}</span>
+                            <span className="text-[#26a65c] font-semibold">{item.val}</span>
                           </div>
                           <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div className="h-full bg-[#00E676] rounded-full" style={{ width: `${item.val}%` }}></div>
+                            <div className="h-full bg-[#26a65c] rounded-full" style={{ width: `${item.val}%` }}></div>
                           </div>
                         </div>
                       ))}
                     </div>
-                    <div className="w-full bg-[#00E676]/10 border border-[#00E676]/20 rounded-xl p-3 text-xs text-white/70">
+                    <div className="w-full bg-[#26a65c]/10 border border-[#26a65c]/20 rounded-xl p-3 text-xs text-white/70">
                       🎯 <strong>Drill:</strong> Towel drill — focus on arm circle consistency
                     </div>
                   </div>
@@ -291,7 +269,7 @@ export default function Home() {
                 { icon: "🔁", metric: "Follow Through", desc: "Completion of the swing arc" },
                 { icon: "⚖️", metric: "Weight Transfer", desc: "Balance shift from back to front foot" },
               ].map(m => (
-                <div key={m.metric} className="bg-[#F8FAFC] border border-slate-100 rounded-xl p-5 text-center hover:border-[#00E676]/40 hover:shadow-sm transition-all">
+                <div key={m.metric} className="bg-[#F8FAFC] border border-slate-100 rounded-xl p-5 text-center hover:border-[#26a65c]/40 hover:shadow-sm transition-all">
                   <div className="text-2xl mb-2">{m.icon}</div>
                   <div className="font-bold text-[#0A1628] text-sm mb-1">{m.metric}</div>
                   <div className="text-[#1E293B]/50 text-xs leading-tight">{m.desc}</div>
@@ -338,14 +316,14 @@ export default function Home() {
                     "Sport-specific drill library",
                   ].map(f => (
                     <li key={f} className="flex items-center gap-3 text-white/70 text-sm">
-                      <span className="text-[#00E676]">✓</span>{f}
+                      <span className="text-[#26a65c]">✓</span>{f}
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Softball card */}
-              <div className="bg-[#F8FAFC] border-2 border-[#00E676]/30 rounded-3xl p-10 relative overflow-hidden">
+              <div className="bg-[#F8FAFC] border-2 border-[#26a65c]/30 rounded-3xl p-10 relative overflow-hidden">
                 <div className="absolute top-6 right-6 opacity-10">
                   <svg width="120" height="120" viewBox="0 0 64 64" fill="none">
                     <circle cx="32" cy="32" r="30" fill="#d97706"/>
@@ -368,7 +346,7 @@ export default function Home() {
                     "Sport-specific drill library",
                   ].map(f => (
                     <li key={f} className="flex items-center gap-3 text-[#1E293B]/70 text-sm">
-                      <span className="text-[#00E676]">✓</span>{f}
+                      <span className="text-[#26a65c]">✓</span>{f}
                     </li>
                   ))}
                 </ul>
@@ -376,7 +354,7 @@ export default function Home() {
             </div>
 
             {/* Shared badge */}
-            <div className="mt-8 bg-[#00E676]/10 border border-[#00E676]/30 rounded-2xl px-8 py-5 text-center">
+            <div className="mt-8 bg-[#26a65c]/10 border border-[#26a65c]/30 rounded-2xl px-8 py-5 text-center">
               <p className="text-[#0A1628] font-semibold">
                 🥎⚾ Select your sport in the app — the AI automatically switches analysis mode, feedback style, and drill library.
               </p>
@@ -420,7 +398,7 @@ export default function Home() {
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.5" fill="#00E676"/>
+                  <circle cx="2" cy="2" r="1.5" fill="#26a65c"/>
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#dots)"/>
@@ -430,12 +408,12 @@ export default function Home() {
           <div className="relative max-w-6xl mx-auto px-6">
             {/* Header */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+              <div className="inline-flex items-center gap-2 bg-[#26a65c]/10 border border-[#26a65c]/30 text-[#26a65c] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
                 🤝 New Feature
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
                 Train Together.<br />
-                <span className="text-[#00E676]">Even When You&apos;re Apart.</span>
+                <span className="text-[#26a65c]">Even When You&apos;re Apart.</span>
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
                 NextSport isn&apos;t just for solo practice. Connect with teammates, challenge your best friend,
@@ -462,7 +440,7 @@ export default function Home() {
                   desc: "Invite a teammate and you both get bonus analysis tokens. The more friends you bring, the more you can both train. Your whole team levels up together.",
                 },
               ].map(item => (
-                <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#00E676]/40 hover:bg-white/8 transition-all">
+                <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#26a65c]/40 hover:bg-white/8 transition-all">
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
@@ -487,7 +465,7 @@ export default function Home() {
                       "Invite up to 10 friends for free",
                     ].map(f => (
                       <li key={f} className="flex items-center gap-3">
-                        <span className="text-[#00E676]">✓</span>{f}
+                        <span className="text-[#26a65c]">✓</span>{f}
                       </li>
                     ))}
                   </ul>
@@ -496,7 +474,7 @@ export default function Home() {
                 {/* Fake leaderboard UI */}
                 <div className="bg-[#0d1e38] rounded-2xl border border-white/10 overflow-hidden">
                   {/* Header */}
-                  <div className="bg-[#00E676]/10 border-b border-white/10 px-5 py-3 flex items-center justify-between">
+                  <div className="bg-[#26a65c]/10 border-b border-white/10 px-5 py-3 flex items-center justify-between">
                     <span className="text-white font-semibold text-sm">🏆 This Week&apos;s Leaderboard</span>
                     <span className="text-white/40 text-xs">7 players</span>
                   </div>
@@ -510,19 +488,19 @@ export default function Home() {
                   ].map(row => (
                     <div
                       key={row.name}
-                      className={`flex items-center gap-4 px-5 py-3.5 border-b border-white/5 ${row.you ? "bg-[#00E676]/10 border-l-2 border-l-[#00E676]" : ""}`}
+                      className={`flex items-center gap-4 px-5 py-3.5 border-b border-white/5 ${row.you ? "bg-[#26a65c]/10 border-l-2 border-l-[#26a65c]" : ""}`}
                     >
                       <span className="text-white/40 text-sm w-4">{row.rank}</span>
                       <div className="flex-1">
-                        <span className={`text-sm font-semibold ${row.you ? "text-[#00E676]" : "text-white"}`}>
+                        <span className={`text-sm font-semibold ${row.you ? "text-[#26a65c]" : "text-white"}`}>
                           {row.name} {row.badge}
                         </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-24 h-1.5 bg-white/10 rounded-full overflow-hidden">
-                          <div className="h-full bg-[#00E676] rounded-full" style={{ width: `${row.score}%` }}></div>
+                          <div className="h-full bg-[#26a65c] rounded-full" style={{ width: `${row.score}%` }}></div>
                         </div>
-                        <span className={`text-xs font-bold w-8 text-right ${row.you ? "text-[#00E676]" : "text-white/60"}`}>{row.score}</span>
+                        <span className={`text-xs font-bold w-8 text-right ${row.you ? "text-[#26a65c]" : "text-white/60"}`}>{row.score}</span>
                       </div>
                     </div>
                   ))}
@@ -535,14 +513,14 @@ export default function Home() {
             </div>
 
             {/* Referral callout */}
-            <div className="mt-8 bg-[#00E676]/10 border border-[#00E676]/30 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center gap-6 justify-between">
+            <div className="mt-8 bg-[#26a65c]/10 border border-[#26a65c]/30 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center gap-6 justify-between">
               <div>
                 <p className="text-white font-bold mb-1">⚾ Refer a Teammate — Both Get Bonus Tokens</p>
                 <p className="text-white/60 text-sm">Invite a friend and you both get +30 free analyses added to your weekly allowance. No limits on referrals.</p>
               </div>
               <Link
                 href="/download"
-                className="flex-shrink-0 bg-[#00E676] text-[#0A1628] font-bold px-6 py-3 rounded-xl hover:bg-[#00ff88] transition-colors text-sm whitespace-nowrap"
+                className="flex-shrink-0 bg-[#26a65c] text-[#0A1628] font-bold px-6 py-3 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm whitespace-nowrap"
               >
                 Invite a Friend ⚾
               </Link>
@@ -566,7 +544,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8">
                   {["10 swing analyses / week", "Basic drill suggestions", "30-day history", "Mobile app access"].map(f => (
                     <li key={f} className="flex items-center gap-3 text-white/70 text-sm">
-                      <span className="text-[#00E676] text-lg">✓</span>{f}
+                      <span className="text-[#26a65c] text-lg">✓</span>{f}
                     </li>
                   ))}
                 </ul>
@@ -575,22 +553,22 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="bg-[#00E676]/10 border-2 border-[#00E676] rounded-2xl p-8 relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00E676] text-[#0A1628] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
+              <div className="bg-[#26a65c]/10 border-2 border-[#26a65c] rounded-2xl p-8 relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#26a65c] text-[#0A1628] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
                   ⭐ MOST POPULAR
                 </div>
-                <p className="text-[#00E676] font-semibold mb-2">Premium</p>
+                <p className="text-[#26a65c] font-semibold mb-2">Premium</p>
                 <div className="text-5xl font-extrabold text-white mb-1">$14.99</div>
                 <p className="text-white/40 text-sm mb-1">/month</p>
                 <p className="text-white/30 text-xs mb-8">vs. $80–150 for a single private lesson</p>
                 <ul className="space-y-3 mb-8">
                   {["200 swing analyses / week", "Full drill library", "Unlimited history", "Priority processing", "Progress analytics", "Early feature access"].map(f => (
                     <li key={f} className="flex items-center gap-3 text-white/70 text-sm">
-                      <span className="text-[#00E676] text-lg">✓</span>{f}
+                      <span className="text-[#26a65c] text-lg">✓</span>{f}
                     </li>
                   ))}
                 </ul>
-                <Link href="/download" className="block text-center bg-[#00E676] text-[#0A1628] font-bold py-3 rounded-xl hover:bg-[#00ff88] transition-colors text-sm">
+                <Link href="/download" className="block text-center bg-[#26a65c] text-[#0A1628] font-bold py-3 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm">
                   Start Free Trial
                 </Link>
               </div>
@@ -599,7 +577,7 @@ export default function Home() {
         </section>
 
         {/* ── DOWNLOAD CTA ── */}
-        <section className="bg-[#00E676] py-24 relative overflow-hidden">
+        <section className="bg-[#26a65c] py-24 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none" aria-hidden="true">
             <DiamondIcon className="w-[500px] h-[500px]" />
           </div>

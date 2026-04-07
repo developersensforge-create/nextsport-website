@@ -105,13 +105,13 @@ export default function FeaturesPage() {
             <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <div className="text-5xl mb-4">{feat.icon}</div>
-                <p className="text-[#00E676] font-semibold text-sm uppercase tracking-wide mb-2">{feat.tagline}</p>
+                <p className="text-[#26a65c] font-semibold text-sm uppercase tracking-wide mb-2">{feat.tagline}</p>
                 <h2 className="text-3xl font-bold text-[#0A1628] mb-4">{feat.title}</h2>
                 <p className="text-[#1E293B]/60 leading-relaxed mb-6">{feat.desc}</p>
                 <ul className="space-y-2">
                   {feat.bullets.map(b => (
                     <li key={b} className="flex items-center gap-3 text-[#1E293B]/70 text-sm">
-                      <span className="text-[#00E676] font-bold">✓</span>{b}
+                      <span className="text-[#26a65c] font-bold">✓</span>{b}
                     </li>
                   ))}
                 </ul>
@@ -119,7 +119,7 @@ export default function FeaturesPage() {
 
               {/* Placeholder visual */}
               <div className={`flex justify-center ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-[#0A1628] to-[#0d2040] border border-[#00E676]/20 flex flex-col items-center justify-center gap-4 shadow-xl">
+                <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-[#0A1628] to-[#0d2040] border border-[#26a65c]/20 flex flex-col items-center justify-center gap-4 shadow-xl">
                   <div className="text-6xl">{feat.icon}</div>
                   <p className="text-white/40 text-sm text-center px-6">Screenshot placeholder — app preview coming soon</p>
                 </div>
@@ -133,7 +133,7 @@ export default function FeaturesPage() {
           <div className="max-w-2xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to See It in Action?</h2>
             <p className="text-white/60 mb-8">Download the app and get your first 10 analyses free. No credit card required.</p>
-            <Link href="/download" className="inline-block bg-[#00E676] text-[#0A1628] font-bold px-10 py-4 rounded-xl hover:bg-[#00ff88] transition-colors">
+            <Link href="/download" className="inline-block bg-[#26a65c] text-[#0A1628] font-bold px-10 py-4 rounded-xl hover:bg-[#1e8f4e] transition-colors">
               Download the App
             </Link>
           </div>

@@ -41,15 +41,15 @@ export function DiamondIcon({ className = "w-8 h-8" }: { className?: string }) {
       {/* Infield dirt */}
       <path d="M40 10 L70 40 L40 70 L10 40 Z" fill="#d97706" opacity="0.15" stroke="#d97706" strokeWidth="1.5"/>
       {/* Base paths */}
-      <line x1="40" y1="10" x2="70" y2="40" stroke="#00E676" strokeWidth="2" strokeLinecap="round"/>
-      <line x1="70" y1="40" x2="40" y2="70" stroke="#00E676" strokeWidth="2" strokeLinecap="round"/>
-      <line x1="40" y1="70" x2="10" y2="40" stroke="#00E676" strokeWidth="2" strokeLinecap="round"/>
-      <line x1="10" y1="40" x2="40" y2="10" stroke="#00E676" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="40" y1="10" x2="70" y2="40" stroke="#26a65c" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="70" y1="40" x2="40" y2="70" stroke="#26a65c" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="40" y1="70" x2="10" y2="40" stroke="#26a65c" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="10" y1="40" x2="40" y2="10" stroke="#26a65c" strokeWidth="2" strokeLinecap="round"/>
       {/* Bases */}
-      <rect x="36" y="6" width="8" height="8" rx="1" fill="white" stroke="#00E676" strokeWidth="1.5"/>
-      <rect x="66" y="36" width="8" height="8" rx="1" fill="white" stroke="#00E676" strokeWidth="1.5"/>
-      <rect x="36" y="66" width="8" height="8" rx="1" fill="white" stroke="#00E676" strokeWidth="1.5"/>
-      <rect x="6" y="36" width="8" height="8" rx="1" fill="white" stroke="#00E676" strokeWidth="1.5"/>
+      <rect x="36" y="6" width="8" height="8" rx="1" fill="white" stroke="#26a65c" strokeWidth="1.5"/>
+      <rect x="66" y="36" width="8" height="8" rx="1" fill="white" stroke="#26a65c" strokeWidth="1.5"/>
+      <rect x="36" y="66" width="8" height="8" rx="1" fill="white" stroke="#26a65c" strokeWidth="1.5"/>
+      <rect x="6" y="36" width="8" height="8" rx="1" fill="white" stroke="#26a65c" strokeWidth="1.5"/>
       {/* Pitcher mound */}
       <circle cx="40" cy="40" r="4" fill="#d97706" opacity="0.6"/>
     </svg>
