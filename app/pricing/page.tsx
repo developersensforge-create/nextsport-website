@@ -61,7 +61,7 @@ export default function PricingPage() {
       <main className="pt-20">
 
         {/* Header */}
-        <section className="bg-[#0A1628] py-24">
+        <section className="bg-[#1a4d2e] py-24">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-5xl font-extrabold text-white mb-6">Simple, Transparent Pricing</h1>
             <p className="text-white/60 text-xl">Start free. Upgrade when you&apos;re ready. No surprises.</p>
@@ -77,7 +77,7 @@ export default function PricingPage() {
               <div className="bg-white border border-slate-200 rounded-2xl p-10 shadow-sm">
                 <p className="text-[#1E293B]/60 font-semibold mb-3">Free</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="text-5xl font-extrabold text-[#0A1628]">$0</span>
+                  <span className="text-5xl font-extrabold text-[#1a4d2e]">$0</span>
                 </div>
                 <p className="text-[#1E293B]/40 text-sm mb-8">Forever. No credit card needed.</p>
                 <ul className="space-y-3 mb-10">
@@ -87,14 +87,14 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/download" className="block text-center border-2 border-[#0A1628] text-[#0A1628] font-semibold py-3.5 rounded-xl hover:bg-[#0A1628] hover:text-white transition-all text-sm">
+                <Link href="/download" className="block text-center border-2 border-[#1a4d2e] text-[#1a4d2e] font-semibold py-3.5 rounded-xl hover:bg-[#1a4d2e] hover:text-white transition-all text-sm">
                   Download Free
                 </Link>
               </div>
 
               {/* Premium */}
-              <div className="bg-[#0A1628] rounded-2xl p-10 shadow-xl relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#26a65c] text-[#0A1628] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
+              <div className="bg-[#1a4d2e] rounded-2xl p-10 shadow-xl relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#f0cc3c] text-[#1a4d2e] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
                   ⭐ MOST POPULAR
                 </div>
                 <p className="text-[#26a65c] font-semibold mb-3">Premium</p>
@@ -110,7 +110,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/download" className="block text-center bg-[#26a65c] text-[#0A1628] font-bold py-3.5 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm">
+                <Link href="/download" className="block text-center bg-[#f0cc3c] text-[#1a4d2e] font-bold py-3.5 rounded-xl hover:bg-[#f5d55a] transition-colors text-sm">
                   Start Free Trial
                 </Link>
               </div>
@@ -119,14 +119,14 @@ export default function PricingPage() {
 
             {/* Feature comparison table */}
             <div className="mt-20 max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-[#0A1628] text-center mb-10">Full Feature Comparison</h2>
+              <h2 className="text-2xl font-bold text-[#1a4d2e] text-center mb-10">Full Feature Comparison</h2>
               <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
                 <table className="w-full">
                   <thead>
                     <tr className="bg-[#F8FAFC]">
                       <th className="text-left px-6 py-4 text-[#1E293B] font-semibold">Feature</th>
                       <th className="px-6 py-4 text-[#1E293B] font-semibold text-center">Free</th>
-                      <th className="px-6 py-4 text-[#0A1628] font-bold text-center">Premium</th>
+                      <th className="px-6 py-4 text-[#1a4d2e] font-bold text-center">Premium</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
@@ -158,11 +158,11 @@ export default function PricingPage() {
         {/* FAQ */}
         <section className="bg-white py-24">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-[#0A1628] text-center mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-[#1a4d2e] text-center mb-12">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {faqs.map((faq) => (
                 <div key={faq.q} className="bg-[#F8FAFC] border border-slate-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#0A1628] mb-2">{faq.q}</h3>
+                  <h3 className="font-bold text-[#1a4d2e] mb-2">{faq.q}</h3>
                   <p className="text-[#1E293B]/60 text-sm leading-relaxed">{faq.a}</p>
                 </div>
               ))}
@@ -173,9 +173,9 @@ export default function PricingPage() {
         {/* CTA */}
         <section className="bg-[#26a65c] py-20">
           <div className="max-w-2xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#0A1628] mb-4">Start Free Today</h2>
-            <p className="text-[#0A1628]/70 mb-8">10 free analyses every week. No credit card. No catch.</p>
-            <Link href="/download" className="inline-block bg-[#0A1628] text-white font-bold px-10 py-4 rounded-xl hover:bg-[#0d1f36] transition-colors">
+            <h2 className="text-3xl font-bold text-[#1a4d2e] mb-4">Start Free Today</h2>
+            <p className="text-[#1a4d2e]/70 mb-8">10 free analyses every week. No credit card. No catch.</p>
+            <Link href="/download" className="inline-block bg-[#1a4d2e] text-white font-bold px-10 py-4 rounded-xl hover:bg-[#1e5535] transition-colors">
               Download the App
             </Link>
           </div>

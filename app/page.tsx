@@ -11,7 +11,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ── */}
-        <section className="relative bg-[#0A1628] min-h-screen flex items-center pt-20 overflow-hidden">
+        <section className="relative bg-[#1a4d2e] min-h-screen flex items-center pt-20 overflow-hidden">
           <BaseballBgPattern />
           {/* Green field glow */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#26a65c]/5 rounded-full blur-3xl pointer-events-none" />
@@ -43,11 +43,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4" id="download">
-                <a href="#download" className="flex items-center justify-center gap-2 bg-white text-[#0A1628] font-semibold px-6 py-3.5 rounded-xl hover:bg-gray-100 transition-colors text-sm">
+                <a href="#download" className="flex items-center justify-center gap-2 bg-white text-[#1a4d2e] font-semibold px-6 py-3.5 rounded-xl hover:bg-gray-100 transition-colors text-sm">
                   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                   Download for iOS
                 </a>
-                <a href="#download" className="flex items-center justify-center gap-2 bg-[#26a65c] text-[#0A1628] font-semibold px-6 py-3.5 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm">
+                <a href="#download" className="flex items-center justify-center gap-2 bg-[#f0cc3c] text-[#1a4d2e] font-semibold px-6 py-3.5 rounded-xl hover:bg-[#f5d55a] transition-colors text-sm">
                   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.45-7.19-2.78-2.78-10.66 9.83zm-1.15-20.23C1.73 3.85 1.5 4.28 1.5 4.83v14.34c0 .55.23.98.53 1.3l.07.06 8.03-8.03v-.19L2.03 3.53zm17.9 7.74L17.4 9.08l-2.99 2.99 2.99 2.99 2.54-1.19c.72-.42.72-1.11.99-1.6-.27-.47-.27-1.18-.99-1.6zM4.17.36L16.62 7.55 13.84 10.33 3.18.5a1.2 1.2 0 01-.15-.14z"/></svg>
                   Download for Android
                 </a>
@@ -58,32 +58,25 @@ export default function Home() {
             {/* Right: real app screenshot */}
             <div className="flex justify-center">
               <div className="relative">
-                {/* Phone frame around real screenshot */}
-                <div className="w-64 rounded-[40px] border-2 border-white/20 shadow-2xl overflow-hidden bg-[#0A1628]">
-                  <Image
-                    src="/screens/homepage.png"
-                    alt="NextSport app home screen showing AI swing analysis dashboard"
-                    width={512}
-                    height={900}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
-                {/* Floating baseball decorations */}
-                <div className="absolute -top-4 -right-6 opacity-60">
-                  <BaseballIcon className="w-12 h-12" />
-                </div>
-                <div className="absolute -bottom-4 -left-6 opacity-40">
-                  <BaseballIcon className="w-8 h-8" />
-                </div>
-                <div className="absolute inset-0 rounded-[40px] bg-[#26a65c]/5 blur-xl -z-10"></div>
+                {/* Real designer app screenshot */}
+                <Image
+                  src="/screens/app-screenshot.png"
+                  alt="NextSport app showing swing analysis results — Load and Stride 3.5, Timing 4.0, Extension 3.5, Swing Pass 4.0"
+                  width={400}
+                  height={720}
+                  className="w-72 h-auto drop-shadow-2xl"
+                  priority
+                />
+                {/* Floating yellow star accent */}
+                <div className="absolute -top-3 -right-3 w-10 h-10 bg-[#f0cc3c] rounded-full flex items-center justify-center shadow-lg text-lg">⭐</div>
+                <div className="absolute inset-0 bg-[#26a65c]/5 blur-2xl -z-10 rounded-3xl"></div>
               </div>
             </div>
           </div>
         </section>
 
         {/* ── STATS BANNER ── */}
-        <section className="bg-[#26a65c] py-10">
+        <section className="bg-[#f0cc3c] py-10">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
@@ -93,8 +86,8 @@ export default function Home() {
                 { num: "Free", label: "To Start" },
               ].map(stat => (
                 <div key={stat.label}>
-                  <div className="text-3xl font-extrabold text-[#0A1628]">{stat.num}</div>
-                  <div className="text-[#0A1628]/70 text-sm mt-1">{stat.label}</div>
+                  <div className="text-3xl font-extrabold text-[#1a4d2e]">{stat.num}</div>
+                  <div className="text-[#1a4d2e]/70 text-sm mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -108,7 +101,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <DiamondIcon className="w-14 h-14" />
               </div>
-              <h2 className="text-4xl font-bold text-[#0A1628] mb-4">Every Young Athlete Deserves Better Feedback</h2>
+              <h2 className="text-4xl font-bold text-[#1a4d2e] mb-4">Every Young Athlete Deserves Better Feedback</h2>
               <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">The current system is broken for youth baseball and softball. Here&apos;s why parents are looking for something better.</p>
             </div>
 
@@ -122,7 +115,7 @@ export default function Home() {
               ].map(card => (
                 <div key={card.title} className="bg-[#F8FAFC] border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                   <div className="text-4xl mb-4">{card.icon}</div>
-                  <h3 className="text-xl font-bold text-[#0A1628] mb-3">{card.title}</h3>
+                  <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">{card.title}</h3>
                   <p className="text-[#1E293B]/60 leading-relaxed">{card.desc}</p>
                 </div>
               ))}
@@ -137,7 +130,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <BatIcon className="w-14 h-14" />
               </div>
-              <h2 className="text-4xl font-bold text-[#0A1628] mb-4">Go From Swing to Feedback in 3 Steps</h2>
+              <h2 className="text-4xl font-bold text-[#1a4d2e] mb-4">Go From Swing to Feedback in 3 Steps</h2>
               <p className="text-[#1E293B]/60 text-lg">No equipment. No appointments. Just your phone and a few minutes at the diamond.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -149,28 +142,41 @@ export default function Home() {
                 <div key={item.step} className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow relative overflow-hidden">
                   <div className="text-[#26a65c] font-black text-6xl absolute top-4 right-4 opacity-10 select-none">{item.step}</div>
                   <div className="text-3xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-bold text-[#0A1628] mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">{item.title}</h3>
                   <p className="text-[#1E293B]/60 leading-relaxed text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            {/* Baseball field diagram callout */}
-            <div className="mt-16 bg-[#0A1628] rounded-3xl p-10 flex flex-col md:flex-row items-center gap-10">
-              <DiamondIcon className="w-32 h-32 flex-shrink-0" />
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Built for Baseball & Softball</h3>
-                <p className="text-white/60 leading-relaxed mb-4">
-                  NextSport understands both sports deeply. Our AI gives sport-specific feedback —
-                  it knows the mechanical differences between a baseball and softball swing, and adapts
-                  its analysis and drills accordingly. One app, both sports.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {["Little League ⚾", "Travel Baseball ⚾", "Fastpitch Softball 🥎", "Slowpitch Softball 🥎", "High School", "Rec League"].map(tag => (
-                    <span key={tag} className="bg-white/10 text-white/70 text-xs px-3 py-1.5 rounded-full border border-white/10">
-                      {tag}
-                    </span>
-                  ))}
+            {/* AI tracking photo callout */}
+            <div className="mt-16 bg-[#1a4d2e] rounded-3xl overflow-hidden">
+              <div className="grid md:grid-cols-2 items-center">
+                {/* Photo */}
+                <div className="relative h-72 md:h-auto overflow-hidden">
+                  <Image
+                    src="/screens/ai-tracking.png"
+                    alt="NextSport AI tracking a youth baseball player's swing mechanics with green tracking dots"
+                    width={900}
+                    height={900}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1a4d2e]/60 md:block hidden" />
+                </div>
+                {/* Copy */}
+                <div className="p-10">
+                  <h3 className="text-2xl font-bold text-white mb-3">AI That Sees What Coaches Miss</h3>
+                  <p className="text-white/70 leading-relaxed mb-6">
+                    NextSport&apos;s AI tracks body position, bat path, and mechanics frame-by-frame —
+                    giving your child feedback that&apos;s simply impossible to get at a busy practice.
+                    Sport-specific for both baseball and softball.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Little League ⚾", "Travel Baseball ⚾", "Fastpitch 🥎", "Slowpitch 🥎", "High School"].map(tag => (
+                      <span key={tag} className="bg-white/10 text-white/70 text-xs px-3 py-1.5 rounded-full border border-white/10">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,7 +186,7 @@ export default function Home() {
         {/* ── PITCHING TEASER ── */}
         <section className="bg-[#F8FAFC] py-20">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="bg-[#0A1628] rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
+            <div className="bg-[#1a4d2e] rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
               {/* Background glow */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-[#26a65c]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -215,9 +221,9 @@ export default function Home() {
 
               {/* Pitching mockup */}
               <div className="relative flex justify-center">
-                <div className="w-60 h-[440px] bg-[#0d1e38] rounded-[36px] border-2 border-white/10 shadow-2xl flex flex-col overflow-hidden">
-                  <div className="h-9 bg-[#0A1628] flex items-center justify-center">
-                    <div className="w-16 h-4 bg-[#0d1e38] rounded-full"></div>
+                <div className="w-60 h-[440px] bg-[#1e5535] rounded-[36px] border-2 border-white/10 shadow-2xl flex flex-col overflow-hidden">
+                  <div className="h-9 bg-[#1a4d2e] flex items-center justify-center">
+                    <div className="w-16 h-4 bg-[#1e5535] rounded-full"></div>
                   </div>
                   <div className="flex-1 flex flex-col items-center justify-center p-5 gap-4">
                     <div className="text-4xl">⚾</div>
@@ -255,7 +261,7 @@ export default function Home() {
         <section className="bg-white py-24">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#0A1628] mb-4">What the AI Actually Analyzes</h2>
+              <h2 className="text-4xl font-bold text-[#1a4d2e] mb-4">What the AI Actually Analyzes</h2>
               <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">Every swing gets scored on the mechanics that matter most for youth development.</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -271,7 +277,7 @@ export default function Home() {
               ].map(m => (
                 <div key={m.metric} className="bg-[#F8FAFC] border border-slate-100 rounded-xl p-5 text-center hover:border-[#26a65c]/40 hover:shadow-sm transition-all">
                   <div className="text-2xl mb-2">{m.icon}</div>
-                  <div className="font-bold text-[#0A1628] text-sm mb-1">{m.metric}</div>
+                  <div className="font-bold text-[#1a4d2e] text-sm mb-1">{m.metric}</div>
                   <div className="text-[#1E293B]/50 text-xs leading-tight">{m.desc}</div>
                 </div>
               ))}
@@ -283,7 +289,7 @@ export default function Home() {
         <section className="bg-white py-24">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#0A1628] mb-4">One App. Two Sports.</h2>
+              <h2 className="text-4xl font-bold text-[#1a4d2e] mb-4">One App. Two Sports.</h2>
               <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">
                 Whether your child plays baseball or softball, NextSport delivers sport-specific AI coaching
                 tailored to the mechanics of each game.
@@ -293,7 +299,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
 
               {/* Baseball card */}
-              <div className="bg-[#0A1628] rounded-3xl p-10 relative overflow-hidden">
+              <div className="bg-[#1a4d2e] rounded-3xl p-10 relative overflow-hidden">
                 <div className="absolute top-6 right-6 opacity-10">
                   <svg width="120" height="120" viewBox="0 0 64 64" fill="none">
                     <circle cx="32" cy="32" r="30" fill="white"/>
@@ -332,7 +338,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="text-5xl mb-4">🥎</div>
-                <h3 className="text-2xl font-bold text-[#0A1628] mb-3">Softball</h3>
+                <h3 className="text-2xl font-bold text-[#1a4d2e] mb-3">Softball</h3>
                 <p className="text-[#1E293B]/60 text-sm leading-relaxed mb-6">
                   AI tuned for the softball swing — underhand pitch timing, faster reaction window,
                   level swing through the larger ball, and power generation from a wider stance.
@@ -355,7 +361,7 @@ export default function Home() {
 
             {/* Shared badge */}
             <div className="mt-8 bg-[#26a65c]/10 border border-[#26a65c]/30 rounded-2xl px-8 py-5 text-center">
-              <p className="text-[#0A1628] font-semibold">
+              <p className="text-[#1a4d2e] font-semibold">
                 🥎⚾ Select your sport in the app — the AI automatically switches analysis mode, feedback style, and drill library.
               </p>
             </div>
@@ -369,7 +375,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <GloveIcon className="w-14 h-14" />
               </div>
-              <h2 className="text-4xl font-bold text-[#0A1628] mb-4">Built for Parents. Trusted by Young Athletes.</h2>
+              <h2 className="text-4xl font-bold text-[#1a4d2e] mb-4">Built for Parents. Trusted by Young Athletes.</h2>
               <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">Everything you need to support your child&apos;s baseball or softball journey.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -383,7 +389,7 @@ export default function Home() {
               ].map(feat => (
                 <div key={feat.title} className="bg-white rounded-2xl p-6 hover:shadow-md transition-shadow border border-slate-100">
                   <div className="text-3xl mb-3">{feat.icon}</div>
-                  <h3 className="font-bold text-[#0A1628] mb-2">{feat.title}</h3>
+                  <h3 className="font-bold text-[#1a4d2e] mb-2">{feat.title}</h3>
                   <p className="text-[#1E293B]/60 text-sm leading-relaxed">{feat.desc}</p>
                 </div>
               ))}
@@ -392,7 +398,7 @@ export default function Home() {
         </section>
 
         {/* ── SPORTS BUDDY ── */}
-        <section className="bg-[#0A1628] py-24 relative overflow-hidden">
+        <section className="bg-[#1a4d2e] py-24 relative overflow-hidden">
           {/* Faint connecting dots background */}
           <div className="absolute inset-0 pointer-events-none opacity-5" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -472,7 +478,7 @@ export default function Home() {
                 </div>
 
                 {/* Fake leaderboard UI */}
-                <div className="bg-[#0d1e38] rounded-2xl border border-white/10 overflow-hidden">
+                <div className="bg-[#1e5535] rounded-2xl border border-white/10 overflow-hidden">
                   {/* Header */}
                   <div className="bg-[#26a65c]/10 border-b border-white/10 px-5 py-3 flex items-center justify-between">
                     <span className="text-white font-semibold text-sm">🏆 This Week&apos;s Leaderboard</span>
@@ -520,7 +526,7 @@ export default function Home() {
               </div>
               <Link
                 href="/download"
-                className="flex-shrink-0 bg-[#26a65c] text-[#0A1628] font-bold px-6 py-3 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm whitespace-nowrap"
+                className="flex-shrink-0 bg-[#f0cc3c] text-[#1a4d2e] font-bold px-6 py-3 rounded-xl hover:bg-[#f5d55a] transition-colors text-sm whitespace-nowrap"
               >
                 Invite a Friend ⚾
               </Link>
@@ -529,7 +535,7 @@ export default function Home() {
         </section>
 
         {/* ── PRICING ── */}
-        <section className="bg-[#0A1628] py-24 relative overflow-hidden">
+        <section className="bg-[#1a4d2e] py-24 relative overflow-hidden">
           <BaseballBgPattern />
           <div className="relative max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
@@ -554,7 +560,7 @@ export default function Home() {
               </div>
 
               <div className="bg-[#26a65c]/10 border-2 border-[#26a65c] rounded-2xl p-8 relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#26a65c] text-[#0A1628] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#f0cc3c] text-[#1a4d2e] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
                   ⭐ MOST POPULAR
                 </div>
                 <p className="text-[#26a65c] font-semibold mb-2">Premium</p>
@@ -568,7 +574,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/download" className="block text-center bg-[#26a65c] text-[#0A1628] font-bold py-3 rounded-xl hover:bg-[#1e8f4e] transition-colors text-sm">
+                <Link href="/download" className="block text-center bg-[#f0cc3c] text-[#1a4d2e] font-bold py-3 rounded-xl hover:bg-[#f5d55a] transition-colors text-sm">
                   Start Free Trial
                 </Link>
               </div>
@@ -577,34 +583,34 @@ export default function Home() {
         </section>
 
         {/* ── DOWNLOAD CTA ── */}
-        <section className="bg-[#26a65c] py-24 relative overflow-hidden">
+        <section className="bg-[#f0cc3c] py-24 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none" aria-hidden="true">
             <DiamondIcon className="w-[500px] h-[500px]" />
           </div>
           <div className="relative max-w-6xl mx-auto px-6 text-center">
             <BaseballIcon className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0A1628] mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#1a4d2e] mb-4">
               Your Child&apos;s Best Season Starts Now
             </h2>
-            <p className="text-[#0A1628]/70 text-lg mb-4 max-w-2xl mx-auto">
+            <p className="text-[#1a4d2e]/70 text-lg mb-4 max-w-2xl mx-auto">
               Join families using AI coaching to help their young athletes level up at bat.
               Free to download. Free to start. No credit card required.
             </p>
             <div className="flex justify-center gap-4 mb-8">
-              <span className="bg-[#0A1628]/10 text-[#0A1628] font-semibold text-sm px-4 py-2 rounded-full">⚾ Baseball</span>
-              <span className="bg-[#0A1628]/10 text-[#0A1628] font-semibold text-sm px-4 py-2 rounded-full">🥎 Softball</span>
+              <span className="bg-[#1a4d2e]/10 text-[#1a4d2e] font-semibold text-sm px-4 py-2 rounded-full">⚾ Baseball</span>
+              <span className="bg-[#1a4d2e]/10 text-[#1a4d2e] font-semibold text-sm px-4 py-2 rounded-full">🥎 Softball</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#" className="flex items-center justify-center gap-3 bg-[#0A1628] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#0d1f36] transition-colors">
+              <a href="#" className="flex items-center justify-center gap-3 bg-[#1a4d2e] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#1e5535] transition-colors">
                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 App Store
               </a>
-              <a href="#" className="flex items-center justify-center gap-3 bg-[#0A1628] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#0d1f36] transition-colors">
+              <a href="#" className="flex items-center justify-center gap-3 bg-[#1a4d2e] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#1e5535] transition-colors">
                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.45-7.19-2.78-2.78-10.66 9.83zm-1.15-20.23C1.73 3.85 1.5 4.28 1.5 4.83v14.34c0 .55.23.98.53 1.3l.07.06 8.03-8.03v-.19L2.03 3.53zm17.9 7.74L17.4 9.08l-2.99 2.99 2.99 2.99 2.54-1.19c.72-.42.72-1.11.99-1.6-.27-.47-.27-1.18-.99-1.6zM4.17.36L16.62 7.55 13.84 10.33 3.18.5a1.2 1.2 0 01-.15-.14z"/></svg>
                 Google Play
               </a>
             </div>
-            <p className="text-[#0A1628]/40 text-sm mt-6">⚾ App store links coming soon</p>
+            <p className="text-[#1a4d2e]/40 text-sm mt-6">⚾ App store links coming soon</p>
           </div>
         </section>
 

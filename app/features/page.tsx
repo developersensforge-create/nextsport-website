@@ -90,7 +90,7 @@ export default function FeaturesPage() {
       <main className="pt-20">
 
         {/* Header */}
-        <section className="bg-[#0A1628] py-24">
+        <section className="bg-[#1a4d2e] py-24">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-5xl font-extrabold text-white mb-6">Everything Your Child Needs to Improve</h1>
             <p className="text-white/60 text-xl leading-relaxed">
@@ -106,7 +106,7 @@ export default function FeaturesPage() {
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <div className="text-5xl mb-4">{feat.icon}</div>
                 <p className="text-[#26a65c] font-semibold text-sm uppercase tracking-wide mb-2">{feat.tagline}</p>
-                <h2 className="text-3xl font-bold text-[#0A1628] mb-4">{feat.title}</h2>
+                <h2 className="text-3xl font-bold text-[#1a4d2e] mb-4">{feat.title}</h2>
                 <p className="text-[#1E293B]/60 leading-relaxed mb-6">{feat.desc}</p>
                 <ul className="space-y-2">
                   {feat.bullets.map(b => (
@@ -119,7 +119,7 @@ export default function FeaturesPage() {
 
               {/* Placeholder visual */}
               <div className={`flex justify-center ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-[#0A1628] to-[#0d2040] border border-[#26a65c]/20 flex flex-col items-center justify-center gap-4 shadow-xl">
+                <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-[#1a4d2e] to-[#1e5535] border border-[#26a65c]/20 flex flex-col items-center justify-center gap-4 shadow-xl">
                   <div className="text-6xl">{feat.icon}</div>
                   <p className="text-white/40 text-sm text-center px-6">Screenshot placeholder — app preview coming soon</p>
                 </div>
@@ -129,11 +129,11 @@ export default function FeaturesPage() {
         ))}
 
         {/* CTA */}
-        <section className="bg-[#0A1628] py-20">
+        <section className="bg-[#1a4d2e] py-20">
           <div className="max-w-2xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to See It in Action?</h2>
             <p className="text-white/60 mb-8">Download the app and get your first 10 analyses free. No credit card required.</p>
-            <Link href="/download" className="inline-block bg-[#26a65c] text-[#0A1628] font-bold px-10 py-4 rounded-xl hover:bg-[#1e8f4e] transition-colors">
+            <Link href="/download" className="inline-block bg-[#f0cc3c] text-[#1a4d2e] font-bold px-10 py-4 rounded-xl hover:bg-[#f5d55a] transition-colors">
               Download the App
             </Link>
           </div>

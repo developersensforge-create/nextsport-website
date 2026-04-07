@@ -1,18 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A1628] text-white/60 py-12">
+    <footer className="bg-[#1a4d2e] text-white/60 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="14" r="13" stroke="#26a65c" strokeWidth="2"/>
-              <path d="M7 14 Q14 6 21 14" stroke="#26a65c" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-              <circle cx="14" cy="14" r="2.5" fill="#26a65c"/>
-            </svg>
-            <span className="text-white font-bold text-lg tracking-tight">NextSport</span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/app-icon-green.png" alt="NextSport icon" width={32} height={32} className="rounded-lg opacity-90" />
+            <Image src="/logo-wordmark.png" alt="NextSport" width={140} height={36} className="h-7 w-auto brightness-0 invert opacity-90" />
           </Link>
 
           {/* Links */}
