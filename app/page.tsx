@@ -199,6 +199,80 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── PITCHING TEASER ── */}
+        <section className="bg-[#F8FAFC] py-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="bg-[#0A1628] rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
+              {/* Background glow */}
+              <div className="absolute top-0 right-0 w-80 h-80 bg-[#00E676]/5 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-semibold px-3 py-1.5 rounded-full mb-5 tracking-wide uppercase">
+                  🆕 Coming Soon
+                </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+                  Now Adding:<br /><span className="text-[#00E676]">Pitching Analysis</span>
+                </h2>
+                <p className="text-white/60 leading-relaxed mb-6">
+                  NextSport is expanding beyond batting. Soon you&apos;ll be able to upload your child&apos;s
+                  pitching video and get AI-powered mechanics feedback — starting with the <strong className="text-white">fastball</strong>.
+                </p>
+                <ul className="space-y-2 mb-8">
+                  {[
+                    "Leg drive & hip-to-shoulder separation",
+                    "Arm path, elbow height & arm slot",
+                    "Release point consistency",
+                    "Follow-through & fielding position",
+                    "Personalized pitching drills",
+                  ].map(f => (
+                    <li key={f} className="flex items-center gap-3 text-white/70 text-sm">
+                      <span className="text-[#00E676]">✓</span>{f}
+                    </li>
+                  ))}
+                </ul>
+                <span className="inline-block bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-sm font-semibold px-5 py-2.5 rounded-xl">
+                  ⚾ Fastball Phase 1 — More Pitches Coming
+                </span>
+              </div>
+
+              {/* Pitching mockup */}
+              <div className="relative flex justify-center">
+                <div className="w-60 h-[440px] bg-[#0d1e38] rounded-[36px] border-2 border-white/10 shadow-2xl flex flex-col overflow-hidden">
+                  <div className="h-9 bg-[#0A1628] flex items-center justify-center">
+                    <div className="w-16 h-4 bg-[#0d1e38] rounded-full"></div>
+                  </div>
+                  <div className="flex-1 flex flex-col items-center justify-center p-5 gap-4">
+                    <div className="text-4xl">⚾</div>
+                    <p className="text-white font-bold text-sm">Fastball Analysis</p>
+                    <div className="w-full space-y-2.5">
+                      {[
+                        { label: "Leg Drive", val: 80 },
+                        { label: "Arm Path", val: 73 },
+                        { label: "Hip Separation", val: 68 },
+                        { label: "Release Point", val: 85 },
+                        { label: "Follow-Through", val: 77 },
+                      ].map(item => (
+                        <div key={item.label}>
+                          <div className="flex justify-between text-xs text-white/50 mb-1">
+                            <span>{item.label}</span>
+                            <span className="text-[#00E676] font-semibold">{item.val}</span>
+                          </div>
+                          <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                            <div className="h-full bg-[#00E676] rounded-full" style={{ width: `${item.val}%` }}></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="w-full bg-[#00E676]/10 border border-[#00E676]/20 rounded-xl p-3 text-xs text-white/70">
+                      🎯 <strong>Drill:</strong> Towel drill — focus on arm circle consistency
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── METRICS BREAKDOWN ── */}
         <section className="bg-white py-24">
           <div className="max-w-6xl mx-auto px-6">
