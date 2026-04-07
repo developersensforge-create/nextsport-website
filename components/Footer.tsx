@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/app-icon-green.png" alt="NextSport icon" width={32} height={32} className="rounded-lg opacity-90" />
-            <Image src="/logo-wordmark.png" alt="NextSport" width={140} height={36} className="h-7 w-auto brightness-0 invert opacity-90" />
+            <Image src="/logo.png" alt="NextSport" width={44} height={44} className="h-10 w-auto" />
+            <span className="text-white font-bold text-lg">NextSport</span>
           </Link>
 
           {/* Links */}
