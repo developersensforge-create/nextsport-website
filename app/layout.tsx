@@ -5,13 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NextSport — AI Baseball Swing Analyzer for Youth Players",
+  title: "NextSport — AI Swing Analyzer for Youth Baseball & Softball",
   description:
-    "Upload your child's swing video and get instant AI-powered coaching feedback. Free to start. Built for youth baseball players and their parents.",
+    "Upload your child's swing video and get instant AI-powered coaching feedback. Free to start. Built for youth baseball and softball players and their parents.",
   keywords:
     "youth baseball swing analyzer, AI baseball coaching app, baseball swing analysis, youth baseball training app",
   openGraph: {
-    title: "NextSport — AI Baseball Swing Analyzer for Youth Players",
+    title: "NextSport — AI Swing Analyzer for Youth Baseball & Softball",
     description:
       "Upload your child's swing video and get instant AI-powered coaching feedback. Free to start.",
     url: "https://nextsport.ai",

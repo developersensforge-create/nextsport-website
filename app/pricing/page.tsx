@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Pricing — NextSport AI Baseball Swing Analyzer",
+  title: "Pricing — NextSport AI Baseball & Softball Swing Analyzer",
   description: "NextSport is free to start — 10 swing analyses every week at no cost. Upgrade to Premium at $14.99/mo for 200 analyses, full drill library, and unlimited history.",
 };
 
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "What age range is NextSport designed for?",
-    a: "NextSport is designed for youth baseball players ages 6–18. The drill recommendations and feedback are calibrated to be age-appropriate and easy for parents and young athletes to understand."
+    a: "NextSport is designed for youth baseball and softball players ages 6–18. The drill recommendations and feedback are calibrated to be age-appropriate and easy for parents and young athletes to understand."
   },
   {
     q: "Do I need special equipment to record swings?",

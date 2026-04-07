@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Features — NextSport AI Baseball Swing Analyzer",
-  description: "Explore NextSport's AI-powered features: swing analysis, personalized drills, progress tracking, and more. Built for youth baseball players and their parents.",
+  title: "Features — NextSport AI Baseball & Softball Swing Analyzer",
+  description: "Explore NextSport's AI-powered features: swing analysis, personalized drills, progress tracking, and more. Built for youth baseball and softball players and their parents.",
 };
 
 const features = [
@@ -94,7 +94,7 @@ export default function FeaturesPage() {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-5xl font-extrabold text-white mb-6">Everything Your Child Needs to Improve</h1>
             <p className="text-white/60 text-xl leading-relaxed">
-              NextSport combines AI-powered analysis with real coaching science to give youth baseball players the feedback they deserve.
+              NextSport combines AI-powered analysis with real coaching science to give youth baseball and softball players the feedback they deserve.
             </p>
           </div>
         </section>

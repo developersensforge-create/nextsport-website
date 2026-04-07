@@ -20,7 +20,7 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
                 <BaseballIcon className="w-4 h-4" />
-                AI-Powered Baseball Training
+                AI-Powered Baseball &amp; Softball Training
               </div>
               <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
                 Better Swings.<br />
@@ -34,7 +34,7 @@ export default function Home() {
 
               {/* Age badges */}
               <div className="flex gap-3 mb-8">
-                {["Ages 6–18", "All Skill Levels", "Any Smartphone"].map(tag => (
+                {["Ages 6–18", "Baseball & Softball", "All Skill Levels", "Any Smartphone"].map(tag => (
                   <span key={tag} className="bg-white/10 text-white/70 text-xs px-3 py-1.5 rounded-full border border-white/10">
                     ⚾ {tag}
                   </span>
@@ -111,7 +111,7 @@ export default function Home() {
               {[
                 { num: "10+", label: "Swing Metrics Analyzed" },
                 { num: "<30s", label: "Analysis Turnaround" },
-                { num: "Ages 6–18", label: "Youth Focus" },
+                { num: "⚾ + 🥎", label: "Baseball & Softball" },
                 { num: "Free", label: "To Start" },
               ].map(stat => (
                 <div key={stat.label}>
@@ -131,7 +131,7 @@ export default function Home() {
                 <DiamondIcon className="w-14 h-14" />
               </div>
               <h2 className="text-4xl font-bold text-[#0A1628] mb-4">Every Young Athlete Deserves Better Feedback</h2>
-              <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">The current system is broken for youth baseball. Here&apos;s why parents are looking for something better.</p>
+              <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">The current system is broken for youth baseball and softball. Here&apos;s why parents are looking for something better.</p>
             </div>
 
             <StitchDivider />
@@ -181,16 +181,16 @@ export default function Home() {
             <div className="mt-16 bg-[#0A1628] rounded-3xl p-10 flex flex-col md:flex-row items-center gap-10">
               <DiamondIcon className="w-32 h-32 flex-shrink-0" />
               <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Built for the Real Game</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Built for Baseball & Softball</h3>
                 <p className="text-white/60 leading-relaxed mb-4">
-                  NextSport understands baseball. Our AI is trained specifically on youth swing mechanics —
-                  not generic sports analytics. It knows the difference between Little League and travel ball,
-                  and it speaks a language parents and young players actually understand.
+                  NextSport understands both sports deeply. Our AI gives sport-specific feedback —
+                  it knows the mechanical differences between a baseball and softball swing, and adapts
+                  its analysis and drills accordingly. One app, both sports.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  {["Little League", "Travel Ball", "High School", "Rec League", "Backyard Practice"].map(tag => (
+                  {["Little League ⚾", "Travel Baseball ⚾", "Fastpitch Softball 🥎", "Slowpitch Softball 🥎", "High School", "Rec League"].map(tag => (
                     <span key={tag} className="bg-white/10 text-white/70 text-xs px-3 py-1.5 rounded-full border border-white/10">
-                      ⚾ {tag}
+                      {tag}
                     </span>
                   ))}
                 </div>
@@ -227,6 +227,89 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── BASEBALL vs SOFTBALL ── */}
+        <section className="bg-white py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-[#0A1628] mb-4">One App. Two Sports.</h2>
+              <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">
+                Whether your child plays baseball or softball, NextSport delivers sport-specific AI coaching
+                tailored to the mechanics of each game.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+
+              {/* Baseball card */}
+              <div className="bg-[#0A1628] rounded-3xl p-10 relative overflow-hidden">
+                <div className="absolute top-6 right-6 opacity-10">
+                  <svg width="120" height="120" viewBox="0 0 64 64" fill="none">
+                    <circle cx="32" cy="32" r="30" fill="white"/>
+                    <path d="M18 12 C14 20, 14 44, 18 52" stroke="#ef4444" strokeWidth="3"/>
+                    <path d="M46 12 C50 20, 50 44, 46 52" stroke="#ef4444" strokeWidth="3"/>
+                  </svg>
+                </div>
+                <div className="text-5xl mb-4">⚾</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Baseball</h3>
+                <p className="text-white/60 text-sm leading-relaxed mb-6">
+                  AI optimized for the baseball swing — overhand pitch timing, weight transfer from back foot,
+                  hip-to-shoulder separation, and a tight rotational path through the zone.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Overhand pitch timing & load mechanics",
+                    "Hip-to-shoulder separation",
+                    "Rotational power & bat path",
+                    "Little League, travel ball, high school",
+                    "Sport-specific drill library",
+                  ].map(f => (
+                    <li key={f} className="flex items-center gap-3 text-white/70 text-sm">
+                      <span className="text-[#00E676]">✓</span>{f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Softball card */}
+              <div className="bg-[#F8FAFC] border-2 border-[#00E676]/30 rounded-3xl p-10 relative overflow-hidden">
+                <div className="absolute top-6 right-6 opacity-10">
+                  <svg width="120" height="120" viewBox="0 0 64 64" fill="none">
+                    <circle cx="32" cy="32" r="30" fill="#d97706"/>
+                    <path d="M18 12 C14 20, 14 44, 18 52" stroke="#ef4444" strokeWidth="3"/>
+                    <path d="M46 12 C50 20, 50 44, 46 52" stroke="#ef4444" strokeWidth="3"/>
+                  </svg>
+                </div>
+                <div className="text-5xl mb-4">🥎</div>
+                <h3 className="text-2xl font-bold text-[#0A1628] mb-3">Softball</h3>
+                <p className="text-[#1E293B]/60 text-sm leading-relaxed mb-6">
+                  AI tuned for the softball swing — underhand pitch timing, faster reaction window,
+                  level swing through the larger ball, and power generation from a wider stance.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Underhand pitch timing & reaction",
+                    "Level swing path for larger ball",
+                    "Stance width & weight distribution",
+                    "Fastpitch & slowpitch support",
+                    "Sport-specific drill library",
+                  ].map(f => (
+                    <li key={f} className="flex items-center gap-3 text-[#1E293B]/70 text-sm">
+                      <span className="text-[#00E676]">✓</span>{f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Shared badge */}
+            <div className="mt-8 bg-[#00E676]/10 border border-[#00E676]/30 rounded-2xl px-8 py-5 text-center">
+              <p className="text-[#0A1628] font-semibold">
+                🥎⚾ Select your sport in the app — the AI automatically switches analysis mode, feedback style, and drill library.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ── FEATURES ── */}
         <section className="bg-[#F8FAFC] py-24">
           <div className="max-w-6xl mx-auto px-6">
@@ -235,7 +318,7 @@ export default function Home() {
                 <GloveIcon className="w-14 h-14" />
               </div>
               <h2 className="text-4xl font-bold text-[#0A1628] mb-4">Built for Parents. Trusted by Young Athletes.</h2>
-              <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">Everything you need to support your child&apos;s baseball journey.</p>
+              <p className="text-[#1E293B]/60 text-lg max-w-2xl mx-auto">Everything you need to support your child&apos;s baseball or softball journey.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -451,10 +534,14 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#0A1628] mb-4">
               Your Child&apos;s Best Season Starts Now
             </h2>
-            <p className="text-[#0A1628]/70 text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-[#0A1628]/70 text-lg mb-4 max-w-2xl mx-auto">
               Join families using AI coaching to help their young athletes level up at bat.
               Free to download. Free to start. No credit card required.
             </p>
+            <div className="flex justify-center gap-4 mb-8">
+              <span className="bg-[#0A1628]/10 text-[#0A1628] font-semibold text-sm px-4 py-2 rounded-full">⚾ Baseball</span>
+              <span className="bg-[#0A1628]/10 text-[#0A1628] font-semibold text-sm px-4 py-2 rounded-full">🥎 Softball</span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#" className="flex items-center justify-center gap-3 bg-[#0A1628] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#0d1f36] transition-colors">
                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
