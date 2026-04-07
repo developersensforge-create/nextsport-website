@@ -18,11 +18,11 @@ export default function Navbar() {
         </Link>
 
         {/* Nav links */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link href="/features" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Features</Link>
-          <Link href="/pricing" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Pricing</Link>
-          <Link href="/about" className="text-white/80 hover:text-white text-sm font-medium transition-colors">About</Link>
-          <Link href="/download" className="text-white/80 hover:text-white text-sm font-medium transition-colors">Download</Link>
+        <div className="hidden md:flex items-center gap-12">
+          <Link href="/features" className="text-white/80 hover:text-white text-base font-semibold transition-colors">Features</Link>
+          <Link href="/pricing" className="text-white/80 hover:text-white text-base font-semibold transition-colors">Pricing</Link>
+          <Link href="/about" className="text-white/80 hover:text-white text-base font-semibold transition-colors">About</Link>
+          <Link href="/download" className="text-white/80 hover:text-white text-base font-semibold transition-colors">Download</Link>
         </div>
 
         {/* CTA — brand yellow */}
