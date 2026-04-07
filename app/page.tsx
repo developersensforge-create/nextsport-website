@@ -256,6 +256,143 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── SPORTS BUDDY ── */}
+        <section className="bg-[#0A1628] py-24 relative overflow-hidden">
+          {/* Faint connecting dots background */}
+          <div className="absolute inset-0 pointer-events-none opacity-5" aria-hidden="true">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <circle cx="2" cy="2" r="1.5" fill="#00E676"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#dots)"/>
+            </svg>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-6">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+                🤝 New Feature
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                Train Together.<br />
+                <span className="text-[#00E676]">Even When You&apos;re Apart.</span>
+              </h2>
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                NextSport isn&apos;t just for solo practice. Connect with teammates, challenge your best friend,
+                and cheer each other on — whether you&apos;re at the field or training at home.
+              </p>
+            </div>
+
+            {/* 3 buddy features */}
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
+              {[
+                {
+                  icon: "👀",
+                  title: "See Your Buddy's Progress",
+                  desc: "Follow a teammate or friend and watch their swing scores improve over time. Cheer them on, spot what they're working on, stay connected through the off-season.",
+                },
+                {
+                  icon: "🏆",
+                  title: "Friendly Challenges",
+                  desc: "Challenge a friend to beat your hip rotation score or bat speed this week. Healthy competition makes practice more fun — and more consistent.",
+                },
+                {
+                  icon: "📨",
+                  title: "Refer & Train Together",
+                  desc: "Invite a teammate and you both get bonus analysis tokens. The more friends you bring, the more you can both train. Your whole team levels up together.",
+                },
+              ].map(item => (
+                <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#00E676]/40 hover:bg-white/8 transition-all">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Visual: buddy comparison mockup */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Your Team Leaderboard</h3>
+                  <p className="text-white/60 mb-6 text-sm leading-relaxed">
+                    See where you stack up against your teammates this week.
+                    Everyone trains harder when the whole team can see the scoreboard.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    {[
+                      "Compare swing scores with teammates",
+                      "Weekly most-improved badge",
+                      "Group drill challenges",
+                      "Invite up to 10 friends for free",
+                    ].map(f => (
+                      <li key={f} className="flex items-center gap-3">
+                        <span className="text-[#00E676]">✓</span>{f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Fake leaderboard UI */}
+                <div className="bg-[#0d1e38] rounded-2xl border border-white/10 overflow-hidden">
+                  {/* Header */}
+                  <div className="bg-[#00E676]/10 border-b border-white/10 px-5 py-3 flex items-center justify-between">
+                    <span className="text-white font-semibold text-sm">🏆 This Week&apos;s Leaderboard</span>
+                    <span className="text-white/40 text-xs">7 players</span>
+                  </div>
+                  {/* Rows */}
+                  {[
+                    { rank: "1", name: "Jake M.", score: 87, badge: "🔥", you: false },
+                    { rank: "2", name: "You", score: 82, badge: "⬆️", you: true },
+                    { rank: "3", name: "Tyler R.", score: 79, badge: "", you: false },
+                    { rank: "4", name: "Carlos D.", score: 74, badge: "", you: false },
+                    { rank: "5", name: "Owen S.", score: 71, badge: "", you: false },
+                  ].map(row => (
+                    <div
+                      key={row.name}
+                      className={`flex items-center gap-4 px-5 py-3.5 border-b border-white/5 ${row.you ? "bg-[#00E676]/10 border-l-2 border-l-[#00E676]" : ""}`}
+                    >
+                      <span className="text-white/40 text-sm w-4">{row.rank}</span>
+                      <div className="flex-1">
+                        <span className={`text-sm font-semibold ${row.you ? "text-[#00E676]" : "text-white"}`}>
+                          {row.name} {row.badge}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-24 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                          <div className="h-full bg-[#00E676] rounded-full" style={{ width: `${row.score}%` }}></div>
+                        </div>
+                        <span className={`text-xs font-bold w-8 text-right ${row.you ? "text-[#00E676]" : "text-white/60"}`}>{row.score}</span>
+                      </div>
+                    </div>
+                  ))}
+                  <div className="px-5 py-3 text-center">
+                    <span className="text-white/30 text-xs">+ 2 more teammates · Invite friends to join</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Referral callout */}
+            <div className="mt-8 bg-[#00E676]/10 border border-[#00E676]/30 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center gap-6 justify-between">
+              <div>
+                <p className="text-white font-bold mb-1">⚾ Refer a Teammate — Both Get Bonus Tokens</p>
+                <p className="text-white/60 text-sm">Invite a friend and you both get +30 free analyses added to your weekly allowance. No limits on referrals.</p>
+              </div>
+              <Link
+                href="/download"
+                className="flex-shrink-0 bg-[#00E676] text-[#0A1628] font-bold px-6 py-3 rounded-xl hover:bg-[#00ff88] transition-colors text-sm whitespace-nowrap"
+              >
+                Invite a Friend ⚾
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── PRICING ── */}
         <section className="bg-[#0A1628] py-24 relative overflow-hidden">
           <BaseballBgPattern />
